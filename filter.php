@@ -1,9 +1,6 @@
 <?php
 // This file is part of Moodle - http://moodle.org/
 //
-// GeSHi syntax highlight filter for Moodle
-// Based on work by Grigory Rubtsov <rgbeast@onlineuniversity.ru>, 2005
-//
 // Uses GeSHi syntax highlighter 1.0.7.5
 // http://qbnz.com/highlighter/
 //
@@ -26,7 +23,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-//defined('MOODLE_INTERNAL') || die();
+defined('MOODLE_INTERNAL') || die();
 
 
 class filter_syntaxhighlighter extends moodle_text_filter {
@@ -41,20 +38,12 @@ class filter_syntaxhighlighter extends moodle_text_filter {
  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/sql.min.js"></script>
  <script>hljs.initHighlightingOnLoad();</script>';
 
-
-
 		$returnText = $text;
 
 		if (stripos($text, '<pre><code') !== false) {
-
-			// $PAGE->requires->js('/filter/syntaxhighlighter/libs/highlight.min.js');
-			// $PAGE->requires->js('/filter/syntaxhighlighter/libs/sql.min.js');
-			// $PAGE->requires->css('/filter/syntaxhighlighter/libs/default.min.css');
-
 			$returnText = $libs.$text;
-
 		} else {
-			$returnText = $text. "Nope";
+			$returnText = $text;
 		}
 
 		return $returnText;
