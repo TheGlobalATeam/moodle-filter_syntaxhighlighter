@@ -18,8 +18,8 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @package    filter_geshi
- * @copyright  2005 Nigel McNie <nigel@geshi.org>
+ * @package    filter_syntaxhighlighter
+ * @copyright  2016 The Global A Team
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
